@@ -1,12 +1,13 @@
-#Markgiu
+# Markgiu
 
 Markgiu is a very simple markdown editor, based on [node-webkit](https://github.com/rogerwang/node-webkit).
 
 This is my first experiment with node-webkit, and it leverages some popular js
 libraries that I commonly use in the browser, client side.
 
-The code base is very simple, it is based on a couple of [knockout.js](http://knockoutjs.com/)
+The code is very simple, it is based on a couple of [knockout.js](http://knockoutjs.com/)
 View-Models. 
+
 See "powered by" section down here for a full listing of used libraries.
 
 Markgiu has no native node dependencies, so it should be usable on any platform
@@ -23,7 +24,7 @@ Features so far:
 This README was created and edited with Markgiu :)
 
 ## Disclaimer
-This project does not aim to be a full-featured markdown edito.
+This project does not aim to be a full-featured markdown editor.
 Use it at your own risk and abuse the code base at your wish.
 
 ## Screenshot  
@@ -60,13 +61,14 @@ if you have any idea about how to do it let me know.
 
 ## Powered by
 
-* [node-webkit](https://github.com/rogerwang/node-webkit)
+* [node-webkit](https://github.com/rogerwang/node-webkit) for delivering to your Desktop
+  and accessing your filesystem
 * the ubiquitous [jquery](http://jquery.com/) for DOM magic
 * [knockout.js](http://knockoutjs.com/) for ui bindings
 * Twitter [bootstrap](http://twitter.github.com/bootstrap/) for css/js ui
 * [Font-awesome](https://github.com/FortAwesome/Font-Awesome) iconic font by Dave Gandy
 * [bootbox](http://bootboxjs.com/) for bootstrap themed js dialogs
-* [ace editor](http://ace.ajax.org/), a full-featured code editor
+* [ace editor](http://ace.ajax.org/) a full-featured code editor for the web
 * [showdown.js](https://github.com/coreyti/showdown) for markdown generation
 
 ## License
