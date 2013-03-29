@@ -22,7 +22,6 @@ Features so far:
 
 This README was created and edited with Markgiu :)
 
-
 ## Disclaimer
 This project does not aim to be a full-featured markdown edito.
 Use it at your own risk and abuse the code base at your wish.
@@ -48,6 +47,12 @@ In short:
         open -n -a node-webkit markgiu/app
 
 
+## Contributing
+Pull requests welcome :)
+
+A main concern is that testing is totally uncovered,
+if you have any idea let me know.
+
 ## Powered by
 
 * [node-webkit](https://github.com/rogerwang/node-webkit)
@@ -61,7 +66,6 @@ In short:
 
 ## License
 This code is released under the MIT license, see the file LICENSE.md.
-
 
 ## Credits
 [Mauro bianchi](https://github.com/bianchimro)
