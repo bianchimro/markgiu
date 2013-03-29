@@ -42,16 +42,21 @@ In short:
    
         git clone https://github.com/bianchimro/markgiu.git
 
-* run with node-webkit like this
+* run on Mac:
         
         open -n -a node-webkit markgiu/app
+
+* run on Linux or Windows:
+        
+        nw markgiu/app
+
 
 
 ## Contributing
 Pull requests welcome :)
 
 A main concern is that testing is totally uncovered,
-if you have any idea let me know.
+if you have any idea about how to do it let me know.
 
 ## Powered by
 
