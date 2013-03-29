@@ -2,7 +2,7 @@ var markgiu = markgiu || {};
 
 
 markgiu.fs = require('fs');
-markgiu.converter = new Showdown.converter({ extensions: ['github', 'wikilink'] });
+markgiu.converter = new Showdown.converter({ extensions: ['github', 'wikilink', 'table'] });
 
         
 markgiu.DocumentPanel = function(options){
