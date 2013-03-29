@@ -57,7 +57,7 @@ In short:
 Pull requests welcome :)
 
 A main concern is that testing is totally uncovered,
-if you have any idea about how to do it let me know.
+suggestions and contributions are welcome.
 
 ## Powered by
 
