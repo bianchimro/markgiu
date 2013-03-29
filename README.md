@@ -5,7 +5,7 @@ Markgiu is a very simple markdown editor, based on [node-webkit](https://github.
 This is my first experiment with node-webkit, and it leverages some popular js
 libraries that I commonly use in the browser, client side.
 
-The code is very simple, it is based on a couple of [knockout.js](http://knockoutjs.com/)
+The code is very simple, it is based on a couple of [knockoutjs](http://knockoutjs.com/)
 View-Models (less than 500 lines of js+css+html code for the whole app, assets excluded).
 
 See "powered by" section down here for a full listing of used libraries.
@@ -65,7 +65,7 @@ suggestions and contributions are welcome.
 * [node-webkit](https://github.com/rogerwang/node-webkit) for delivering to your Desktop
   and accessing your filesystem
 * the ubiquitous [jquery](http://jquery.com/) for DOM magic
-* [knockout.js](http://knockoutjs.com/) for ui bindings
+* [knockoutjs](http://knockoutjs.com/) for ui bindings
 * Twitter [bootstrap](http://twitter.github.com/bootstrap/) for css/js ui
 * [Font-awesome](https://github.com/FortAwesome/Font-Awesome) iconic font by Dave Gandy
 * [bootbox](http://bootboxjs.com/) for bootstrap themed js dialogs
