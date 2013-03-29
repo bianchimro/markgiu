@@ -1,0 +1,128 @@
+@media print {
+  body * {
+    display:none;
+  }
+  .section_to_print {
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+  }
+}
+
+
+
+body{
+  margin:0;
+  padding:0;
+ }
+ 
+#wrap{height:100%; min-height:100%; position:static;}
+ 
+.top-navbar{
+  position:fixed;  
+  top:0;
+  left:0;
+  right:0;
+  height:40px;
+ }
+
+.xcontainer{
+    position:fixed;
+    top:40px;
+    bottom:80px;
+    right:0;
+    left:0;
+}
+
+.bottom-navbar{
+  position:fixed;  
+  bottom:0;
+  left:0;
+  right:0;
+  height:40px;
+}
+
+.workspace-left{
+    width:20%;
+    color: white;
+    height:100%;
+    min-height:200px;
+    overflow:auto;
+}
+.workspace-right{
+    width:80%;
+    height:100%;
+}
+
+
+.editor-markup{
+    /*background:black;*/
+    width:50%;
+    position:relative;
+    height:100%;
+}
+
+.editor-preview{
+    color:black;
+    width:50%;
+    height:100%;
+    overflow:auto;
+}
+
+.editor{
+    position:relative;
+    bottom:0;
+}
+
+.editor-preview .edit{
+    padding:40px 20px;}
+
+
+.full{
+    width;
+    height:100%;
+    min-width:100%;
+    min-height:100%;
+
+}
+
+.tab-button{
+    height:20px;
+    padding:4px;
+}
+.tab-button:hover{
+    background:blue;
+    cursor:pointer;
+}
+
+.tab-button.selected{
+    background:black;
+    color:white;
+}
+
+.tab-button a{
+    line-height: 20px;
+    text-decoration:none;
+    
+}
+
+
+.tab-files{
+  
+}
+
+.zero { display:none !important; }
+
+.topalert{
+    height:20px;
+    margin-bottom:0px !important;
+}
+
+
+
+.splash{
+    height:80%;margin-top:10%;
+    text-align:center;  
+}

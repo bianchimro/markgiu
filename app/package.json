@@ -1,0 +1,17 @@
+{
+  "name": "My Web App",
+  "main": "index.html",
+  "window": {
+    "icon": "link.png",
+    "toolbar": false,
+    "width": 1024,
+    "height": 600,
+    "position": "mouse",
+    "min_width": 800,
+    "min_height": 400,
+    "show" : false
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

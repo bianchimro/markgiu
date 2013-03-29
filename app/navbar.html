@@ -1,0 +1,54 @@
+{% load url from future %}
+{% load bootstrap %}
+
+ <div class="navbar navbar-fixed-top">
+     <div class="navbar-inner">
+         <div class="container">
+             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </a>
+             <a class="brand {% active_if_starts request.path '/' %}" href="{% url "home" %}">WebGPV</a>
+             <div class="nav-collapse collapse">
+                 <ul class="nav">
+                     <li class="{% active_if_starts request.path '/something' %}"><a href="{% url "via_list" %}">Viario</a></li>
+                     <li class="{% active_if_starts request.path '/ricerca' %}"><a href="{% url "ordinanza_list" %}">Ordinanze</a></li>
+                     <li class="{% active_if_starts request.path '/ricerca' %}"><a href="{% url "richiesta_list" %}">Richieste</a></li>
+                     <li><a href="#about">About</a></li>
+                     <!--
+                     <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                             <li><a href="#">Action</a></li>
+                             <li><a href="#">Another action</a></li>
+                             <li><a href="#">Something else here</a></li>
+                             <li class="divider"></li>
+                             <li class="nav-header">Nav header</li>
+                             <li><a href="#">Separated link</a></li>
+                             <li><a href="#">One more separated link</a></li>
+                         </ul>
+                     </li>
+                     -->
+                 </ul>
+                {% if user.is_authenticated %}
+                 <form class="navbar-form pull-right" action="{% url 'logout_then_login' %}" method="POST">{% csrf_token %}
+                     <span class="navbar-text">Benvenuto {{ user.username }}</span>
+                     <button class="btn btn-mini" type="submit">Disconnetti</button>
+                 </form>
+                 {% else %}
+                 <form class="navbar-form pull-right" action="{% url "login" %}" method="POST">{% csrf_token %}
+                     <!--
+                     <input class="span2" type="text" placeholder="username" name="username">
+                     <input class="span2" type="password" placeholder="password" name="password">
+                     -->
+                     <button class="btn" type="submit" class="btn">Login</button>
+                 </form>
+                {% endif %}
+             </div>
+         </div>
+     </div>
+
+ </div>
+
+

@@ -1,0 +1,48 @@
+<script src="{{ STATIC_URL}}jquery/jquery.formset.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //return;
+        $('.vie-form').formset({
+            prefix: '{{ vie.prefix }}',
+            deleteText : 'Elimina via',
+            deleteCssClass : 'btn btn-small btn-danger pull-right',
+            addText : 'Aggiungi altra via',
+            addCssClass: 'btn btn-small btn-info btn-aggiungi-via',
+        });
+        
+        $(".btn-aggiungi-via").click(function(){
+            console.log("aaa");
+            var elements = $('input.ajax-search-via');
+            var lastIdx = elements.length;
+            $(elements[lastIdx]).unbind();
+            enableVieAutocomplete($(elements[lastIdx]));
+            console.log(elements);
+
+        });
+    })
+</script>
+
+
+<script src="{{ STATIC_URL}}jquery/jquery.formset.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.vie-form').formset({
+            prefix: '{{ vie.prefix }}',
+            deleteText : 'Elimina via',
+            //deleteCssClass : 'btn btn-small btn-danger pull-right',
+            addText : 'Aggiungi altra via',
+            addCssClass: 'btn btn-small btn-info btn-aggiungi-via',
+        });
+        
+        $('.vie-form').on("form-added", function(event, data){
+            console.log("aaa", data);
+            var elements = $('input.ajax-search-via');
+            var lastIdx = elements.length;
+            //$(elements[lastIdx]).unbind();
+            enableVieAutocomplete($(elements[lastIdx]));
+            console.log(elements);
+
+        });
+    })
+</script>
+

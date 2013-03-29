@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Markdown editor!</title>
+        <meta name="description" content="MarkGiu">
+        <meta name="author" content="Mauro Bianchi">
+        <meta name="viewport" content="width=device-width">
+       
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome-more/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="assets/global/css/main.css">
+
+        <script src="assets/jquery/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div id="wrap">
+            
+            <div class="navbar top-navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="#">Mark<i class="icon-arrow-down"></i>Giu</a>
+                    <ul class="nav pull-left">
+                        <li>
+                            <a href="#" data-bind="click:addTabNew"><i class="icon-plus-sign"></i>New File</a>
+                        </li>
+                        <li>
+                            <a href="#" data-bind="click:chooseFileToOpen"><i class="icon-file"></i>Open file</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- top-navbar -->
+
+           
+            <div id="" class="xcontainer">
+                <!-- ko if: !tabs().length -->
+                <div class="container">
+                    <div data-bind="" class="">
+                        <div class="hero-unit splash" style="">
+                            <h1>Welcome to Mark<i class="icon-arrow-down"></i>Giu</h1>
+                            <p>
+                            A node-webkit based markdown editor
+                            </p>
+                            <p>
+                                <button class="btn btn-large btn-primary" data-bind="click: chooseFileToOpen">Open a file</button>
+                                <button class="btn btn-large btn-primary" data-bind="click: addTabNew">Create a new file</button>
+                            </p>
+                        </div>
+                    </div>
+                
+                </div>            
+                <!-- /ko -->
+                
+                <!-- ko if: tabs().length -->  
+                
+                <div class="workspace-left pull-left">
+ 
+                    <div class="alert topalert" data-bind="if: tabs().length">
+                            <span class="" href="">Open files</span>
+                    </div> 
+
+                    <div class="tab-files" data-bind="foreach: tabs">
+                        <div class="tab-button" 
+                            data-bind="css: { selected : id == $root.currentTab() }, click: $root.selectTab">
+                                <a data-bind=""><span data-bind="text: label"></span></a>
+                                &nbsp;
+                                <span data-bind="if: dirty"><i style="color:red" class="icon-exclamation-sign"></i></span>
+                                <span class="pull-right">
+                                    <a href="#" class="" data-bind="click: $root.closeTab"><i class="icon-ban-circle"></i></a>
+                                </span>
+                        </div>
+                    </div>
+                </div><!-- workspace-left -->
+
+                <div class="workspace-right pull-left">
+                    <div class="full" data-bind="foreach: tabs">
+                        <div class="full" data-bind="css: { zero : $root.currentTab() != id }">
+
+                            <div class="alert topalert" data-bind="css: { 'alert-danger': dirty(), 'alert-info': !dirty() }">
+                                <span data-bind="if: !filepath()">Untitled file.</span>
+                                <span data-bind="text: filepath()"></span>
+                                <div class="buttons pull-right">
+                                    <span data-bind="if: dirty"><i style="" class="icon-exclamation-sign"></i><b> File has changed. </b></span>
+                                    <button class="btn btn-mini btn-danger" data-bind="click:saveFile, attr: {disabled: !filepath() }"><i class="icon-save"></i>&nbsp;Save</button>
+                                    <button class="btn btn-mini btn-danger" data-bind="click:$root.chooseFileToSaveAs"><i class="icon-save"></i>&nbsp;Save as ...</button>
+                                    <button class="btn  btn-mini " data-bind="click: $root.closeTab"><i class="icon-ban-circle"></i>&nbsp;Close</button>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="editor-wrapper full" data-bind="css: { zero : $root.currentTab() != id }, attr: {id: id }">
+                            
+                                <div class="editor-markup pull-left">
+                                    <div class="edit full">
+                                        <div class="editor full" data-bind=""></div>
+                                    </div>
+                                </div>
+                                <div class="editor-preview pull-left">
+                                    <div class="edit">
+                                    <div data-bind="html: convertedContent()" class="section_to_print"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+                    <!-- /ko -->
+                    
+                </div><!-- workspace-right -->
+                <div class="clearfix"></div>
+
+
+                
+                
+            <!-- /ko -->
+            <div>
+                <input class="hide" id="choosefile" type="file" />
+                <input class="hide" id="savefileas" type="file" nwsaveas />
+            </div>
+                
+            </div><!-- xcontainer -->
+
+            <div class="bottom-navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <p class="navbar-text muted" style="text-align:center">A node-webkit based MarkDown editor by Mauro Bianchi 2013 - https://github.com/bianchimro/markgiu</p>
+                    </div>
+                 </div>
+            </div><!-- bottom-navbar -->
+       
+        </div><!-- wrap --> 
+        
+        <!-- le javascript -->
+
+        <script src="assets/knockout/knockout-2.2.1.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/ace/cloud/ace.js"></script>
+        <script src="assets/showdown/showdown.js"></script>
+        <script src="assets/showdown/extensions/github.js"></script>
+        <script src="assets/showdown/extensions/wikilink.js"></script>
+        <script src="assets/bootbox/bootbox.min.js"></script>
+        
+        <script src="js/models.js"></script>
+        <script src="js/main.js"></script>
+ 
+    </body>
+</html>
