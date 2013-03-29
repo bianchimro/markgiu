@@ -42,7 +42,7 @@ In short:
    
         git clone https://github.com/bianchimro/markgiu.git
 
-* run node-webkit like this
+* run with node-webkit like this
         
         open -n -a node-webkit markgiu/app
 
