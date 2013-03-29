@@ -2,8 +2,6 @@
 
 Markgiu is a very simple markdown editor, based on [node-webkit](https://github.com/rogerwang/node-webkit).
 
-This README was created and edited with Markgiu :)
-
 This is my first experiment with node-webkit, and it leverages some popular js
 libraries that I commonly use in the browser, client side.
 
@@ -21,6 +19,9 @@ Features so far:
 * multiple documents
 * detects content changes
 * basic support for adding a document with a wiki-style syntax
+
+This README was created and edited with Markgiu :)
+
 
 ## Disclaimer
 This project does not aim to be a full-featured markdown edito.
