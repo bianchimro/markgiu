@@ -6,7 +6,7 @@ This is my first experiment with node-webkit, and it leverages some popular js
 libraries that I commonly use in the browser, client side.
 
 The code is very simple, it is based on a couple of [knockout.js](http://knockoutjs.com/)
-View-Models. 
+View-Models (less than 500 lines of js+css+html code for the whole app, assets excluded).
 
 See "powered by" section down here for a full listing of used libraries.
 
@@ -22,6 +22,7 @@ Features so far:
 * basic support for adding a document with a wiki-style syntax
 
 This README was created and edited with Markgiu :)
+
 
 ## Disclaimer
 This project does not aim to be a full-featured markdown editor.
