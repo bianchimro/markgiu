@@ -101,6 +101,11 @@ a .icon-resize-small{display: none;}
   color: #FFF;
   z-index: 99;
 }
+
+.make-full:hover{
+  text-decoration:none;
+}
+
 .editor-preview .make-full { top: 40px;}
 .editor-markup .make-full { top: 3px;}
 
