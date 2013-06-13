@@ -92,11 +92,13 @@
                             <div class="editor-wrapper full" data-bind="css: { zero : $root.currentTab() != id }, attr: {id: id }">
                             
                                 <div class="editor-markup pull-left">
+                                    <a href="" class="make-full" data-bind="click:toggleFullMarkup"><i class="icon-resize-full"></i><i class="icon-resize-small"></i></a>
                                     <div class="edit full">
                                         <div class="editor full" data-bind=""></div>
                                     </div>
                                 </div>
                                 <div class="editor-preview pull-left">
+                                    <a href="" class="make-full" data-bind="click:toggleFullPreview"><i class="icon-resize-full"></i><i class="icon-resize-small"></i></a>
                                     <div class="edit">
                                     <div data-bind="html: convertedContent()" class="section_to_print"></div>
                                     </div>

@@ -71,6 +71,39 @@ body{
     overflow:auto;
 }
 
+.full-preview .editor-markup{
+    width:0;
+}
+.full-preview .editor-preview{
+    width:100%;
+}
+.full-markup .editor-markup{
+    width:100%;
+}
+.full-markup .editor-preview{
+    width:0;
+}
+
+a .icon-resize-small{display: none;}
+.full-markup .icon-resize-small, .full-preview .icon-resize-small{display: inline-block;}
+.full-markup .icon-resize-full, .full-preview .icon-resize-full{display: none;}
+.full-markup .editor-preview .make-full {display: none;}
+.full-preview .editor-markup .make-full {display: none;}
+
+.make-full {
+  position: absolute;
+  right: 20px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  background-color: #EEE;
+  color: #FFF;
+  z-index: 99;
+}
+.editor-preview .make-full { top: 40px;}
+.editor-markup .make-full { top: 3px;}
+
 .editor{
     position:relative;
     bottom:0;
