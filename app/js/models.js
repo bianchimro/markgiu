@@ -138,6 +138,16 @@ markgiu.DocumentPanel = function(options){
         //console.log("destroy");
     };
     
+    self.toggleFullPreview = function() {
+        $('#' + self.id).toggleClass("full-preview");
+        $('#' + self.id + ' .editor textarea').focus();
+    };
+
+    self.toggleFullMarkup = function() {
+        $('#' + self.id).toggleClass("full-markup");
+        $('#' + self.id + ' .editor textarea').focus();
+    };
+
 };
 
 
