@@ -77,6 +77,7 @@ This code is released under the MIT license, see the file LICENSE.md.
 
 ## Credits
 [Mauro bianchi](https://github.com/bianchimro)
+
 [Marco Rivadeneyra](https://github.com/marcorivm)
 
 ## Contact
